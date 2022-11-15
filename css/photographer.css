@@ -106,7 +106,7 @@ main{
 
 }
 
-.contact_button:hover{
+.contact_button:hover:focus{
     background-color: #D3573C;
     color:black
 }
@@ -146,12 +146,18 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     position: relative;
-    top: 70px;
+    top: 100px;
     
 }
+
+.mediaSection::after {
+    content: "";
+    flex: 0 0 30%;
+    gap: 10px;
+  }
 
 .mediaSection .media{
     display: flex;
@@ -205,6 +211,11 @@ main{
     min-height: 250px;
     object-fit: cover;
     border-radius: 2%;
+
+}
+
+.media .image:hover{
+        cursor: pointer;
 }
 .modal {
     border-radius: 5px;
@@ -318,6 +329,7 @@ textarea{
 
 #lightbox i{
     font-size: 50px;
+    cursor: pointer;
 }
 
 
@@ -326,6 +338,7 @@ textarea{
     position: relative;
     top:-34%;
     left: -3.5%;
+    cursor: pointer;
 }
 
 .menuSection{

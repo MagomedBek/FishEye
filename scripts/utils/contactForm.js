@@ -1,6 +1,9 @@
 function displayModal() {
     const modal = document.getElementById("contact_modal");
 	  modal.setAttribute("id","showContact");
+    var name = document.querySelector(".infocard h2");
+    var contact = document.querySelector(".modal header h2");
+    contact.innerHTML += ' '+ name.textContent; 
 }
 
 function request() {
