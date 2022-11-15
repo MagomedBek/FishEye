@@ -1,14 +1,98 @@
-#contact_modal {
-    display: none;
+*{
+    padding: 0;
+    margin:0;
+
 }
 
+main{
+    padding: 0 5%;
+}
+#contact_modal {
+    display: none;
+    
+}
+
+ #showContact{
+    display: flex;
+    position: fixed ;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #80808080;
+}
+.logo {
+    height: 50px;
+    padding: 2% 5%;
+}
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
-    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.photograph-header  article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 95%;
+    height: 100%;
+   
+}
+
+.photograph-header  .infocard{
+   height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    }
+
+.photograph-header  .desc {
+   width: auto;
+   height: 25%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+}
+
+
+
+
+
+.photograph-header  a {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.photograph-header  img {
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photograph-header  h2 {
+    color: #D3573C;
+    width: auto;
+    font-size: 3em;
+}
+
+.photograph-header  h3 {
+    color: #901C1C;
+    width: auto;
 }
 
 .contact_button {
+   
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -19,8 +103,109 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
+.contact_button:hover{
+    background-color: #D3573C;
+    color:black
+}
+
+.contactRequest{
+    align-self: flex-start;
+}
+.hide{
+    display: none;
+}
+
+.popularity{
+    width: auto;
+    position: fixed;
+    bottom: 0%;
+    right: 2%;
+    border-radius: 10px 10px 0 0;
+    background-color: #DB8876;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 20%;
+    height: 8%;
+    z-index: 3;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.popularity .totalLikes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15%;
+}
+.mediaSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    position: relative;
+    top: 70px;
+    
+}
+
+.mediaSection .media{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    width: 30%;
+    height: 55vh;
+}
+
+
+.mediaSection .media .infocard{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3% 0;
+    color: #901C1C;
+
+}
+
+.likes{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 20%;
+    font-size: 1.5rem;
+}
+.likes i{
+    color: #901C1C;
+    cursor: pointer;
+}
+
+.mediaSection  span{
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mediaSection  span ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style-type:none;
+    padding: 0 5px;
+
+}
+.media .image{
+    width: 100%;
+    height: 90%;
+    min-height: 250px;
+    object-fit: cover;
+    border-radius: 2%;
+}
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
@@ -34,13 +219,17 @@
 }
 
 .modal header {
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column-reverse;
+    order: 0;
+    align-items: center;
     width: 100%;
 }
 
-.modal header img {
-    cursor: pointer;
+.modal header img{
+    align-self: end;
 }
+
 
 .modal header h2 {
     font-size: 64px;
@@ -52,19 +241,20 @@ form {
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 form label {
     color: #312E2E;
     font-size: 36px;
+    align-self: flex-start;
 }
 
 form div {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: self-start;
+    align-items: center;
     margin-bottom: 26px;
 }
 
@@ -74,3 +264,136 @@ form input {
     border: none;
     border-radius: 5px;
 }
+
+textarea{
+    width: inherit;
+}
+
+.errorMsg{
+    display: none;
+}
+
+
+.error .errorMsg{
+    display: block;
+}
+#lightbox{
+    color: #901C1C;
+    position: fixed ;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #80808080;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5%;
+}
+
+#content{
+    width: 40%;
+    height: 90%;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#content .media{
+    width: 80%;
+    height: 80%;
+    border-radius: 0;
+}
+
+#content .media .image{
+    border-radius: 0;
+}
+
+#lightbox.show{
+    display: flex;
+    z-index: 2;
+}
+
+#lightbox i{
+    font-size: 50px;
+}
+
+
+
+.close{
+    position: relative;
+    top:-34%;
+    left: -3.5%;
+}
+
+.menuSection{
+    display: flex;
+    position: absolute;
+    z-index: 2;
+   align-items: baseline;
+   justify-content: space-around;
+   width: 15%;
+   margin-top: 1%;
+}
+
+.menuSection p, .menuSection ul li{
+    font-weight: bold;
+}
+#menu{
+    background-color: #901C1C;
+    overflow: hidden;
+    padding: 5px;
+    font-size: larger;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    gap: 10px;
+    border-radius: 5px;
+}
+#selector span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+
+    
+}
+
+#selector span .turned{
+    transform: rotate(90deg);
+}
+
+#menu ul{
+    display: none;
+}
+
+#menu .showed {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#menu ul li{
+ 
+    list-style-type:none;
+    padding: 10px;
+    border-top: 1px solid white;
+    cursor: pointer;
+
+    
+}
+
+#menu ul .selected{
+   display: none;
+}
+
+
+
