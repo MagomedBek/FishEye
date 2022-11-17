@@ -10,7 +10,6 @@ function photographerFactory(data) {
         link.setAttribute("href",uri)
         article.appendChild(link);
 
-        
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
         img.setAttribute("alt",name);
