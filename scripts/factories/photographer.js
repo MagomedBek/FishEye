@@ -146,11 +146,11 @@ function select(listMedia,type){
 }
 
 function slider(){
-    return `<div id="lightbox">
-                <i class="fas fa-chevron-left previous"></i>    
+    return `<div id="lightbox" aria-label="Image closeup view">
+                <i class="fas fa-chevron-left previous" aria-label="Previous image"></i>    
             <div id="content">
             </div>
-                <i class="fas fa-chevron-right next "></i>
-                <i class="fas fa-times close"></i>
+                <i class="fas fa-chevron-right next " aria-label="Next image"></i>
+                <i class="fas fa-times close" aria-label="Close dialog"></i>
             </div>`
 }
