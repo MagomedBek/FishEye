@@ -9,7 +9,7 @@ const photos = document.querySelectorAll('.media');
 
 async function getPhotographer() {
     // Penser à remplacer par les données récupérées dans le json
-    let data = await  fetch ("./../../data/photographers.json") ;
+    let data = await  fetch ("./data/photographers.json") ;
     let database = await  data.json();
     let photographer = database.photographers.find(p => p.id == id);
     let listMedia = database.media.filter(m => m.photographerId == id);
