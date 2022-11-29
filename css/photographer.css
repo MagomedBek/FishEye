@@ -221,12 +221,14 @@ main{
     border-radius: 5px;
     background-color: #DB8876;
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 35px;
     margin: auto;
+    overflow: scroll;
 }
 
 .modal header {

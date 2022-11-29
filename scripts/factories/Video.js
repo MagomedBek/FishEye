@@ -17,7 +17,7 @@ class Video{
                 <h2>${this.title}</h2>
                 <div class="likes">
                     <p>${this.likes}</p>
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart" aria-label="likes"></i>
                 </div>
             </div>
         </article>`
