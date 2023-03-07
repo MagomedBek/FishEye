@@ -53,13 +53,13 @@ function photographerFactory(data) {
     }
 
     function getUserCardDOM2(){
-        return `<article>
+        return `<article tabindex= "0">
             <a href="photographer.html?id=${id}">
                 <img src="${picture}" alt="${name}" id="${id}">
             </a>
-            <div class="infocard">
+            <div class="infocard" tabindex= "0" >
                 <h2>${name}</h2>
-                <div class="desc">
+                <div class="desc" >
                     <h3>${city}, ${country}</h3>
                     <p>${tagline}</p>
                     <p>${price}€/jour</p>
@@ -83,7 +83,7 @@ function menu(){
     return `
     <span>
     <p>Trier par </p>
-    <select name="menu" id="menu">
+    <select name="menu" id="menu" tabindex= "0">
         <option value="" id="selector" >Selectionnez la categorie</option>
         <option value="popular" id="popular" >Popularité</option>
         <option value="date" id="date">Date</option>
@@ -99,7 +99,7 @@ function menu(){
         
          <p>Trier par</p>
          <div id="menu">
-         <div id = "selector" >
+         <div id = "selector" tabindex= "0" >
              <span ><p>Selectionner</p><i class="fas fa-chevron-right"></i></span>
          </div>
              <ul >

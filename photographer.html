@@ -7,28 +7,31 @@
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - photographe </title>
     <script src="https://kit.fontawesome.com/506c6c8a44.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="FishEye" /></a>
     </header>
     <main id="main">
-      <div class="photograph-header">
+      <div class="photograph-header " tabindex= '0'>
         <button class="contact_button" onclick="displayModal()" name="Contact Me">Contactez-moi</button>
       </div>
-      <menu class="menuSection">
+      <menu class="menuSection" tabindex= '0'>
 
       </menu>
-      <div class="mediaSection">
+      <div class="mediaSection" tabindex= '0'>
 
 
       </div>
     </main>
     <div id="contact_modal">
-			<div class="modal">
+			<div class="modal" tabindex= "0">
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img src="assets/icons/close.svg" onclick="closeModal()"  tabindex= "0" class ="closeModal"/>
         </header>
 				<form>
 					<div id="contactBlock">

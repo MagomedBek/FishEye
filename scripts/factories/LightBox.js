@@ -20,8 +20,9 @@ class LightBox{
             this.currentMedia = this.listMedia[0]
        }else{
         this.currentMedia =  this.listMedia[index+1];
+        index+=1;
        }
-    
+       console.log(index)
         this.container.innerHTML = this.currentMedia.slided();
 
         

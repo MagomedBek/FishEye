@@ -13,8 +13,8 @@ class Image{
     display(){
         
         
-       return `<article class = "media" data-id ="${this.id}">
-                <img class= "image" src="${this.imgAdress}" alt="${this.image}" id="${this.id}">
+       return `<article class = "media" data-id ="${this.id}" tabindex= '0'>
+                <img  tabindex= "0" class= "image" src="${this.imgAdress}" alt="${this.image}" id="${this.id}">
             <div class="infocard">
                 <h2>${this.title}</h2>
                 <div class="likes">
@@ -28,7 +28,7 @@ class Image{
     slided(){
         
         
-        return `<article class = "media" data-id ="${this.id}">
+        return `<article class = "media" data-id ="${this.id}" tabindex= "0">
                  <img class= "image" src="${this.imgAdress}" alt="${this.image}" id="${this.id}">
              <div class="infocard">
                  <h2>${this.title}</h2>

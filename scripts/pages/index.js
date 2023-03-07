@@ -20,6 +20,10 @@
             //photographersSection.appendChild(userCardDOM);
             photographersSection.innerHTML+=userCardDOM;
         });
+       /* let tab =2;
+        document.querySelectorAll(".photographer_section article").forEach(article => {
+            article.setAttribute('tabIndex',tab++);
+        })*/
     };
 
     async function init() {

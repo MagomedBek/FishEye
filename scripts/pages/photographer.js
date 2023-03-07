@@ -95,6 +95,12 @@ function setSlide(listMedia){
     let lightbox = new LightBox(listMedia);
     
     document.querySelectorAll(".mediaSection .media .image ").forEach(mediaCardDOM => {
+        mediaCardDOM.addEventListener("keyup", (event) => {
+            if(event.key=== "Enter"){
+                lightbox.show(event.currentTarget.closest(".media").dataset.id);
+                
+               }
+        });
         mediaCardDOM.addEventListener("click", (event) => {
             lightbox.show(event.currentTarget.closest(".media").dataset.id);
         })
@@ -166,11 +172,12 @@ async function init() {
    toSort(listMediaFactory);
    // let sortMenu = document.querySelectorAll("#menu li");
    displayMediaData(listMediaFactory);
+   keyClose();
     document.querySelector(".contactRequest").addEventListener("click",function(e){
         e.preventDefault()
-        request()
-
+        request();
     })
+    
 };
 
 
