@@ -3,10 +3,9 @@
 function displayModal() {
     const modal = document.getElementById("contact_modal");
     modal.setAttribute("id","showContact");
-   const forme = document.querySelector("#showContact .modal")
-   forme.focus();
+   const forme = document.querySelector("#showContact .modal").focus();
     var name = document.querySelector(".infocard h2");
-    var contact = document.querySelector(".modal header h2");
+    var contact = document.querySelector(".modal header h2  ");
     if(!contact.textContent.includes(name.textContent)){
       contact.innerHTML += ' '+ name.textContent; 
     }
@@ -58,16 +57,21 @@ function closeModal() {
 }
 
 function  keyClose(){
-  let button = document.querySelector(".closeModal");
-    button.addEventListener("click", () =>{
-      console.log("ok escape");
-    })
-  button.addEventListener("keyup", (e) => {
+  console.log("test")
+  const button = document.querySelector(".closeModal");
+  console.log(button)
+    button.focus();
+  document.addEventListener("keyup", (e) => {
+    console.log(e.key);
     if(e.key === "Escape") {
-      // write your logic here.
+      button.focus(
+
+
+      )
       console.log("ok escape");
-  }
       closeModal();
+  }
+      
     
 })
 }
