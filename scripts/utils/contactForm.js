@@ -43,10 +43,6 @@ function request() {
               document.querySelector("#contactBlock").classList.add("hide")
             }
       
-        
-   
- 
-    
           
         
 }
@@ -57,21 +53,17 @@ function closeModal() {
 }
 
 function  keyClose(){
-  console.log("test")
-  const button = document.querySelector(".closeModal");
+
+  const button = document.querySelector(".contact_button");
   console.log(button)
-    button.focus();
+  
   document.addEventListener("keyup", (e) => {
     console.log(e.key);
     if(e.key === "Escape") {
-      button.focus(
-
-
-      )
-      console.log("ok escape");
+      button.focus()
+  
       closeModal();
   }
-      
-    
+  
 })
 }

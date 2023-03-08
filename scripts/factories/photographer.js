@@ -83,8 +83,8 @@ function menu(){
     return `
     <span>
     <p>Trier par </p>
-    <select name="menu" id="menu" tabindex= "0">
-        <option value="" id="selector" >Selectionnez la categorie</option>
+    <select name="menu" id="menu">
+        <option value="" id="selector"  tabindex= "0" >Selectionnez la categorie</option>
         <option value="popular" id="popular" >Popularité</option>
         <option value="date" id="date">Date</option>
         <option value ="title" id="title">Titre</option>
@@ -103,9 +103,10 @@ function menu(){
              <span ><p>Selectionner</p><i class="fas fa-chevron-right"></i></span>
          </div>
              <ul >
-                <li id="popular">Popularité</li>
-                <li  id="date">Date</li>
-                <li  id="title">Titre</li>
+                <li id="popular" tabIndex = "100">Popularité</li>
+                <li  id="date" tabIndex = "101">Date</li>
+                <li  id="title" tabIndex = "102
+                ">Titre</li>
             
              </ul>
         </div>

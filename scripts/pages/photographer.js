@@ -112,9 +112,10 @@ function toSort(listMedia){
     
     //let sortMenu = document.getElementById("menu");
     let sortM = document.querySelectorAll("ul li");
-    let selector = document.querySelector(" #selector");
+    let selector = document.querySelector("#selector");
     let menu =document.querySelector("ul")
-    let arrow=document.querySelector("#selector span i ")
+    let arrow=document.querySelector("#selector span i ");
+    
    /* sortMenu.addEventListener("change",()=>{ 
         select(listMedia,sortMenu);  
         displayMediaData(listMedia);
@@ -129,26 +130,44 @@ function toSort(listMedia){
         }else{
             menu.classList.add("showed");
             arrow.classList.add("turned");
+            menu.querySelector("li").focus();
+            
         }
       };
       selector.addEventListener("click",showMenu);
+      selector.addEventListener("keyup",(e) => {
+        switch(e.key){
+            case "Enter" : 
+                showMenu();
+                break;
+           }
+      });
       sortM.forEach(menuElem => {
             
-          menuElem.addEventListener("click",()=>{
-             select(listMedia,menuElem.id);
-             sortM.forEach(menuElem => {
-                menuElem.classList.remove("selected"); 
-             }
-                );
-             
-             menuElem.classList.add("selected"); 
-             selector.querySelector("p").innerHTML = menuElem.textContent;
-             menu.classList.remove("showed");
-             arrow.classList.remove("turned");
-              displayMediaData(listMedia); 
-              });
+          menuElem.addEventListener("click",filterMedia);
+          menuElem.addEventListener("keyup",(e) =>{
+            if(e.key === "Enter"){
+                filterMedia(e);
+            }
+            
+        
+        })
               
       })
+
+      function filterMedia(e){
+        select(listMedia,e.target.id);
+        sortM.forEach(menuElem => {
+            e.target.classList.remove("selected"); 
+        }
+           );
+        
+           e.target.classList.add("selected"); 
+        selector.querySelector("p").innerHTML = e.target.textContent;
+        menu.classList.remove("showed");
+        arrow.classList.remove("turned");
+         displayMediaData(listMedia); 
+    }
       
 }
 
