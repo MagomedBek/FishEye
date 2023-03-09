@@ -61,7 +61,6 @@ function  keyClose(){
     console.log(e.key);
     if(e.key === "Escape") {
       button.focus()
-  
       closeModal();
   }
   
