@@ -158,7 +158,7 @@ function toSort(listMedia){
       function filterMedia(e){
         select(listMedia,e.target.id);
         sortM.forEach(menuElem => {
-            e.target.classList.remove("selected"); 
+            menuElem.classList.remove("selected"); 
         }
            );
         
